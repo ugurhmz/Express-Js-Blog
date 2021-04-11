@@ -10,25 +10,17 @@
     <section>
         <h1>Yazılar</h1>
         <ul>
-            <li><a href="#">
-                Blog 1</a>  
-                <p>Lorem ipsum Lorem ipsum Lorem ipsum dolor sit amet.</p>        
-            </li>
+            <% blogs.forEach(myblog => { %>
 
-            <li><a href="#">
-                Blog 2</a>  
-                <p>Lorem ipsum Lorem ipsum Lorem ipsum dolor sit amet.</p>        
-            </li>
+                <li>
+                    <a href="#"><%= myblog.title %> </a>  
+                    <p><%= myblog.short %></p>        
+                </li>
 
-            <li><a href="#">
-                Blog 3</a>  
-                <p>Lorem ipsum Lorem ipsum Lorem ipsum dolor sit amet.</p>        
-            </li>
+            <% })   %>
 
-            <li><a href="#">
-                Blog 4</a>  
-                <p>Lorem ipsum Lorem ipsum Lorem ipsum dolor sit amet.</p>        
-            </li>
+         
+
         </ul>
     </section>
 
