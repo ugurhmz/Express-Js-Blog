@@ -8,12 +8,12 @@ app.listen(3000)
 
 app.get('/',(req,res)=> {
 
-      res.render('index')
+      res.render('index', {title:'Anasayfa'})
 })
 
-app.get('about',(req,res)=> {
+app.get('/about',(req,res)=> {
 
-      res.render('about')
+      res.render('about',{title:'Hakkımda Sayfası'})
 })
 
 //__________________about-us olunca yönlendir->
@@ -24,5 +24,5 @@ app.get('/about-us',(req,res) => {
 
 //_________________middleware (404) git_______________
 app.use((req,res)=> {
-      res.status(404).render('404')
+      res.status(404).render('404',{title:'404 Sayfa Bulunamadı'})
 })
