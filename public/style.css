@@ -1,3 +1,57 @@
 body {
-      background-color:lightcyan;
+      background-color:#fff;
 }
+
+nav {
+      display:flex;
+      flex-direction:row;
+      justify-content:space-around;
+      border-bottom:3px solid #000;
+}
+
+nav ul {
+      display:flex;
+      flex-direction: row;
+      list-style: none;
+}
+
+nav ul li {
+      margin-right:2rem;
+      
+}
+
+nav ul li a {
+      border: 2px solid black;
+      padding: .8rem;
+      border-radius: .4rem;
+      text-decoration:none;
+      
+      color:#000;
+      font-size:1.2rem;
+      font-weight: 500;
+}
+
+
+nav ul li a:hover {
+      background-color:#df4f4a;
+      color:white;
+}
+
+
+section {
+      max-width:800px;
+      margin:2.3rem auto;
+}
+
+form {
+      display:flex;
+      flex-direction:column;
+      max-width:20rem;
+      margin:2.5rem auto;
+}
+
+form input {
+      margin-bottom: .8rem;
+      padding:.8rem .9rem;
+}
+

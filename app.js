@@ -23,11 +23,18 @@ app.get('/about',(req,res)=> {
       res.render('about',{title:'Hakkımda Sayfası'})
 })
 
-//__________________about-us olunca yönlendir_______
-app.get('/about-us',(req,res) => {
+
+app.get('/about-us',(req,res) => { //__________________about-us olunca yönlendir_______
 
       res.redirect('/about')
 })
+
+
+app.get('/login',(req,res)=> {
+      res.render('login',{title:'Login Form'})
+})
+
+
 
 //_________________middleware (404) git______________
 app.use((req,res)=> {
