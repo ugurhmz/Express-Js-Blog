@@ -11,7 +11,7 @@
 
         <h1>Admin sayfası </h1>
         <p>
-            <a href="/admin/add">Yeni yazı ekle</a> 
+            <a href="/admin/add" id="btn">Yeni yazı ekle</a> 
         </p>
 
             <ul>
@@ -29,22 +29,26 @@
     </section>
 
     <script>
-        const del= document.querySelector('a.del')
+        const del= document.querySelectorAll('a.del')
+        const del_links = [].slice.call(del)
+        
+        del_links.forEach((item,i)=>{
+            item.addEventListener('click',(e)=>{
+                const endpoint = `/admin/delete/${item.dataset.doc}`
 
-        del.addEventListener('click',(e)=> {
+                fetch(endpoint, {
+                    method:'DELETE'
+                })
 
-            const endpoint =`/admin/delete/${del.dataset.doc}`
+                .then((response) => response.json())
+                .then((data) => window.location.href = data.link)
+                .catch((err)=> {
+                    console.log(err)
+                })
 
-            fetch(endpoint,{
-                method:'DELETE'
+
             })
 
-            .then((response) => response.json())
-            .then((data) => window.location.href = data.link)
-
-            .catch((err)=>{
-                console.log(err)
-            })
 
 
         })

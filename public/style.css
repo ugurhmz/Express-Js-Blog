@@ -56,3 +56,22 @@ form input {
       padding:.8rem .9rem;
 }
 
+
+
+#btn {
+      padding:.5rem .4rem;
+      border:1px solid black;
+      border-radius: .6rem;
+      text-decoration: none;
+      color:white;
+      background-color:#0D6EFD;
+}
+
+#btn:hover {
+      padding:.5rem .4rem;
+      border:1px solid black;
+      border-radius: .6rem;
+      text-decoration: none;
+      color:white;
+      background-color:#044bb6;
+}
