@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <%- include('./inc/head.ejs')%>
+</head>
+<body>
+      
+    <%- include('./inc/nav.ejs') %>
+
+    <section>
+
+        <h1>Admin sayfası </h1>
+        <p>
+            <a href="/admin/add">Yeni yazı ekle</a> 
+        </p>
+
+            <ul>
+
+                <% blogs.forEach(myblog => { %>
+                    <li>
+                    
+                        <p><%=myblog.title  %> </p>   
+                        <a href="" class="del" data-doc="<%=myblog._id%>">Sil</a>     
+                        
+                    </li>
+                <% })  %>
+
+            </ul>
+    </section>
+
+    <script>
+        const del= document.querySelector('a.del')
+
+        del.addEventListener('click',(e)=> {
+
+            const endpoint =`/admin/delete/${del.dataset.doc}`
+
+            fetch(endpoint,{
+                method:'DELETE'
+            })
+
+            .then((response) => response.json())
+            .then((data) => window.location.href = data.link)
+
+            .catch((err)=>{
+                console.log(err)
+            })
+
+
+        })
+
+
+    </script>
+
+
+
+</body>
+</html>
