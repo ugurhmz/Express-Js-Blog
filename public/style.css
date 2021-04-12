@@ -74,4 +74,25 @@ form input {
       text-decoration: none;
       color:white;
       background-color:#044bb6;
+      cursor:pointer;
+}
+
+#btn-green{
+      padding:.5rem .4rem;
+      border:1px solid black;
+      border-radius: .6rem;
+      text-decoration: none;
+      color:white;
+      background-color:#5be731;
+}
+
+
+#btn-green:hover {
+      padding:.5rem .4rem;
+      border:1px solid black;
+      border-radius: .6rem;
+      text-decoration: none;
+      color:white;
+      background-color:#0f700f;
+      cursor:pointer;
 }
